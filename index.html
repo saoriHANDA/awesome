@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>富士山のみどころガイド</title>
     <style>
-        /* デザインのベース */
         body {
             font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
             margin: 0;
@@ -15,7 +14,6 @@
             line-height: 1.6;
         }
 
-        /* ヘッダー */
         header {
             background: linear-gradient(rgba(0, 122, 255, 0.7), rgba(0, 122, 255, 0.7)), 
                         url('https://images.unsplash.com/photo-1490806678282-46347c0af3c9?auto=format&fit=crop&q=80&w=1000');
@@ -26,20 +24,14 @@
             text-align: center;
         }
 
-        header h1 {
-            font-size: 3rem;
-            margin: 0;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-        }
+        header h1 { font-size: 3rem; margin: 0; text-shadow: 2px 2px 4px rgba(0,0,0,0.3); }
 
-        /* コンテンツ幅の制限 */
         .container {
             max-width: 800px;
             margin: -50px auto 50px;
             padding: 0 20px;
         }
 
-        /* セクション（カード）のスタイル */
         section {
             background: white;
             padding: 30px;
@@ -57,22 +49,46 @@
 
         .spot-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
             gap: 20px;
             margin-top: 20px;
         }
 
         .spot-item {
-            background: #eef2f7;
-            padding: 15px;
-            border-radius: 10px;
-            font-size: 0.9rem;
+            background: #f1f5f9;
+            padding: 20px;
+            border-radius: 12px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
 
         .spot-item strong {
             display: block;
             color: #007AFF;
-            margin-bottom: 5px;
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+
+        /* マップリンク用のボタンスタイル */
+        .map-link {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 8px 12px;
+            background-color: #ffffff;
+            color: #007AFF;
+            text-decoration: none;
+            border: 1px solid #007AFF;
+            border-radius: 6px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            text-align: center;
+            transition: all 0.2s;
+        }
+
+        .map-link:hover {
+            background-color: #007AFF;
+            color: white;
         }
 
         footer {
@@ -100,28 +116,27 @@
         <h2>おすすめのみどころ</h2>
         <div class="spot-grid">
             <div class="spot-item">
-                <strong>河口湖（富士五湖）</strong>
-                逆さ富士の名所。四季折々の花々と富士山のコラボレーションが楽しめます。
+                <div>
+                    <strong>河口湖（富士五湖）</strong>
+                    逆さ富士の名所。四季折々の花々と富士山のコラボレーションが楽しめます。
+                </div>
+                <a href="https://www.google.com/maps/search/?api=1&query=河口湖" target="_blank" class="map-link">📍 地図で見る</a>
             </div>
             <div class="spot-item">
-                <strong>新倉山浅間公園</strong>
-                五重塔と富士山、そして桜を一枚の絵に収められる絶景スポットです。
+                <div>
+                    <strong>新倉山浅間公園</strong>
+                    五重塔と富士山、そして桜を一枚の絵に収められる絶景スポットです。
+                </div>
+                <a href="https://www.google.com/maps/search/?api=1&query=新倉山浅間公園" target="_blank" class="map-link">📍 地図で見る</a>
             </div>
             <div class="spot-item">
-                <strong>五合目（スバルライン）</strong>
-                車で行ける最高地点。雲海を見下ろしながら、登山の雰囲気を感じられます。
+                <div>
+                    <strong>富士スバルライン五合目</strong>
+                    車で行ける最高地点。雲海を見下ろしながら、登山の雰囲気を感じられます。
+                </div>
+                <a href="https://www.google.com/maps/search/?api=1&query=富士山五合目" target="_blank" class="map-link">📍 地図で見る</a>
             </div>
         </div>
-    </section>
-
-    <section>
-        <h2>ベストシーズン</h2>
-        <ul>
-            <li><strong>春（4月）:</strong> 桜と富士山</li>
-            <li><strong>夏（7月〜8月）:</strong> 登山シーズン・赤富士</li>
-            <li><strong>秋（11月）:</strong> 紅葉の映える富士</li>
-            <li><strong>冬（1月〜2月）:</strong> 雪化粧が最も美しい時期</li>
-        </ul>
     </section>
 </div>
 
